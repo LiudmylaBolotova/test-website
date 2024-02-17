@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test-website</title>
+    <link rel="icon" type="image/png" href="https://example.com/image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+<!-- Header -->
+
+    <header class="header">
+      <div class="header-logo">
+        <h1 class="header-logo__logo">
+          <span class="header-logo__span">V</span>ideo<span
+            class="header-logo__span"
+            >V</span
+          >isionaries
+        </h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="servises.html" class="header__nav-link">Services</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="videos.html" class="header__nav-link">Video</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <button class="header__button-link" onclick="openModal()">Ask!</button>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div id="backdrop" class="backdrop" onclick="closeModal()">
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <svg class="close" onclick="closeModal()" width="26" height="26">
+            <use xlink:href="./images/symbol-defs.svg#icon-cross"></use>
+          </svg>
+          <h2 class="modal-title">Fill out the form</h2>
+          <form id="form" class="form">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <main class="main container">
+        <!-- First section -->
+
+      <section class="main__section">
+        <div class="main__part">
+          <h2 class="main__title">VideoVisionaries: we perform miracles!</h2>
+          <p class="main__description">
+            Our company is a leader in the market for producing high-quality,
+            creative photos and videos. A professional approach, the use of the
+            most modern technologies and practices allow you to realize all your
+            ideas. VideoVisionaries means responsibility and quality. You can
+            only be limited by the flight of your imagination!
+          </p>
+          <div class="main__buttons">
+            <button class="main__buttons-link">Let`s go!</button>
+            <button class="main__buttons-link">Learn more</button>
+          </div>
+        </div>
+
+        <div class="main__video-container">
+          <video controls class="main__video">
+            <source src="./videos/work(1080p).mp4" type="video/mp4" />
+            Your browser does not support video playback
+          </video>
+        </div>
+      </section>
+<!-- Second section -->
+
+      <section class="main__section">
+        <div class="main__part-work">
+          <h2 class="main__title">The working process</h2>
+
+          <ul class="main__list">
+            <li class="main__item">
+              <svg class="main__icon" width="50" height="50">
+                <use xlink:href="./images/symbol-defs.svg#icon-pencil"></use>
+              </svg>
+              <h3 class="main__title-small">
+                The deepest possible dive into your idea
+              </h3>
+              <p class="main__description">
+                A detailed study of your vision for the project allows you to
+                execute it with maximum accuracy. Your ideas and wishes are the
+                basis for our work
+              </p>
+            </li>
+
+            <li class="main__item">
+              <svg class="main__icon" width="50" height="50">
+                <use
+                  xlink:href="./images/symbol-defs.svg#icon-video-camera"
+                ></use>
+              </svg>
+              <h3 class="main__title-small">Project production</h3>
+              <p class="main__description">
+                Selection of talents, suitable locations, taking into account
+                the specifics of the project. Work on details and embodiment of
+                ideas on electronic media
+              </p>
+            </li>
+
+            <li class="main__item">
+              <svg class="main__icon" width="50" height="50">
+                <use xlink:href="./images/symbol-defs.svg#icon-search"></use>
+              </svg>
+              <h3 class="main__title-small">
+                An important stage of final work
+              </h3>
+              <p class="main__description">
+                You can always find from us support, the necessary resources and
+                detailed guidance for the successful completion of the project
+              </p>
+            </li>
+          </ul>
+        </div>
+
+          <div class="main__part-foto">
+            <ul class="main__list-img">
+                <li class="main__part-img">
+                  <img
+                    src="./images/camera-1867184_640.jpg"
+                    class="main__item-img"
+                  />
+                </li>
+                <li class="main__part-img">
+                  <img src="./images/job2.jpg" class="main__item-img" />
+                </li>
+                <li class="main__part-img">
+                  <img
+                    src="./images/office-932926_640.jpg"
+                    class="main__item-img"
+                  />
+                </li>
+              </ul>
+          </div>
+    
+      </section>
+
+      <!-- Slayder -->
+
+      <section class="main__section">
+        <h3 class="main__title-slider">This was created by our professionals</h3>
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/1(1080p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/2(720p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/3(720p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/4 (720p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/5 (1080p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/6(1080p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/7(1080p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/8(720p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/9(1080p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/10 (720p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/11(720p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+              <div class="slide">
+                <video controls class="slide-video">
+                  <source src="./videos/12 (1080p).mp4" type="video/mp4" />
+                  Your browser does not support video playback
+                </video>
+              </div>
+            </div>
+            <button class="prev-slide"><svg class="close" onclick="closeModal()" width="26" height="26">
+                <use xlink:href="./images/symbol-defs.svg#icon-point-left"></use>
+              </svg></button>
+            <button class="next-slide"><svg class="close" onclick="closeModal()" width="26" height="26">
+                <use xlink:href="./images/symbol-defs.svg#icon-point-right"></use>
+              </svg></button>
+          </div>
+          
+      </section>
+      
+
+      <!-- Third section -->
+
+      <section class="main__section">
+        <div class="main__part">
+          <h2 class="main__title">Our partners</h2>
+          <p class="main__description">
+            Our work is valued by world-famous companies. Partners can always
+            count on a unique approach to their tasks from our professionals
+          </p>
+        </div>
+        <ul class="main__partners-list">
+          <li class="main__partner">
+            <img src="./images/1s.png" alt="photos" class="main__img" />
+          </li>
+          <li class="main__partner">
+            <img src="./images/2h.png" alt="google" class="main__img" />
+          </li>
+          <li class="main__partner">
+            <img src="./images/3w.png" alt="huawei" class="main__img" />
+          </li>
+          <li class="main__partner">
+            <img src="./images/4g.png" alt="whatsapp" class="main__img" />
+          </li>
+          <li class="main__partner">
+            <img src="./images/5ph.png" alt="slack" class="main__img" />
+          </li>
+          <li class="main__partner">
+            <img src="./images/6l.png" alt="linux" class="main__img" />
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__logo">
+            <div class="header-logo">
+                <h2 class="header-logo__logo">
+                  <span class="header-logo__span">V</span>ideo<span
+                    class="header-logo__span"
+                    >V</span
+                  >isionaries
+                </h2>
+              </div>
+              <div class="footer__content">
+                <p class="footer__copyright">&copy; 2024 VideoVisionaries</p>
+                <p class="footer__rights">All rights reserved</p>
+              </div>
+        </div>
+      
+      <div class="footer__info">
+        <div class="footer__contact">
+            <div class="footer__address">
+                <h3 class="main__title-small">Contacts</h3>
+              <address class="footer__address-info">
+                <p class="footer__address-text">
+                  123 Main Street, New York, NY 10001
+                </p>
+                <ul class="footer__contact-list">
+                  <li class="footer__contact-item">
+                    <a href="mailto:info@example.com" class="footer__contact-link"
+                      >info@example.com</a
+                    >
+                  </li>
+                  <li class="footer__contact-item">
+                    <a href="tel:(212) 555-1234" class="footer__contact-link"
+                      >(212) 555-1234</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+           
+            <div class="footer__social">
+              <h3 class="main__title-small">We are in social networks</h3>
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link"><svg class="footer__icon" width="50" height="50">
+                    <use xlink:href="./images/symbol-defs.svg#icon-vimeo2"></use>
+                  </svg></a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link"><svg class="footer__icon" width="50" height="50">
+                    <use xlink:href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg></a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link"><svg class="footer__icon" width="50" height="50">
+                    <use xlink:href="./images/symbol-defs.svg#icon-facebook2"></use>
+                  </svg></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
