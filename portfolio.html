@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test-website</title>
+    <link rel="icon" type="image/png" href="https://example.com/image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="header-logo">
+        <h1 class="header-logo__logo">
+          <span class="header-logo__span">V</span>ideo<span
+            class="header-logo__span"
+            >V</span
+          >isionaries
+        </h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="./index.html" class="header__nav-link">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="./servises.html" class="header__nav-link">Services</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <button class="header__button-link" onclick="openModal()">Ask!</button>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div id="backdrop" class="backdrop" onclick="closeModal()">
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <svg class="close" onclick="closeModal()" width="26" height="26">
+            <use xlink:href="./images/symbol-defs.svg#icon-cross"></use>
+          </svg>
+          <h2 class="modal-title">Fill out the form</h2>
+          <form id="form" class="form">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-contact">
+        <h3 class="main__title-small">Our contacts</h3>
+        <p>123 Main Street, New York, NY 10001</p>
+        <p>(212) 555-1234</p>
+        <p>info@example.com</p>
+
+        <div class="footer__social">
+          <h3 class="main__title-small">We are in social networks</h3>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-vimeo2"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-linkedin"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-facebook2"
+                  ></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <main class="main container">
+      <!-- First section -->
+
+      <section class="portfolio__section">
+        <div class="filters">
+          <label for="filter">Select a category</label>
+          <select id="filter">
+            <option value="all">All videos</option>
+            <option value="business">Business</option>
+            <option value="mobile">Mobile</option>
+            <option value="design">Design</option>
+            <option value="nature">Nature</option>
+            <option value="advertising">Advertising</option>
+          </select>
+        </div>
+        <div class="gallery">
+          <div class="video-item business">
+            <video controls>
+              <source src="./videos/1-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Платформа для онлайн-курсов по программированию
+            </figcaption>
+          </div>
+          <div class="video-item business">
+            <video controls>
+              <source src="./videos/2-2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Веб-приложение для планирования путешествий</figcaption>
+          </div>
+
+          <div class="video-item business">
+            <video controls>
+              <source src="./videos/3-3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Сервис для заказа еды с доставкой на дом</figcaption>
+          </div>
+          <div class="video-item mobile">
+            <video controls>
+              <source src="./videos/2-4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Мобильное приложение для управления финансами
+            </figcaption>
+          </div>
+
+          <div class="video-item mobile">
+            <video controls>
+              <source src="./videos/2-5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Платформа для онлайн-бронирования отелей</figcaption>
+          </div>
+          <div class="video-item mobil">
+            <video controls>
+              <source src="./videos/2-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Мобильное приложение для изучения иностранных языков
+            </figcaption>
+          </div>
+
+          <div class="video-item mobile">
+            <video controls>
+              <source src="./videos/2-3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Сервис для онлайн-продажи редких коллекционных предметов
+            </figcaption>
+          </div>
+          <div class="video-item mobile">
+            <video controls>
+              <source src="./videos/2-4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Веб-приложение для поиска работы и рекрутинга
+            </figcaption>
+          </div>
+
+          <div class="video-item mobile">
+            <video controls>
+              <source src="./videos/2-5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Мобильное приложение для медитации и релаксации
+            </figcaption>
+          </div>
+          <div class="video-item design">
+            <video controls>
+              <source src="./videos/3-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Веб-платформа для креативного дизайна логотипов
+            </figcaption>
+          </div>
+
+          <div class="video-item design">
+            <video controls>
+              <source src="./videos/3-2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Мобильное приложение для редактирования фотографий
+            </figcaption>
+          </div>
+
+          <div class="video-item design">
+            <video controls>
+              <source src="./videos/3-4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Сервис для разработки электронных буклетов и брошюр
+            </figcaption>
+          </div>
+          <div class="video-item design">
+            <video controls>
+              <source src="./videos/3-5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Платформа для создания инфографики и диаграмм
+            </figcaption>
+          </div>
+
+          <div class="video-item design">
+            <video controls>
+              <source src="./videos/3-6.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Платформа для анимации и создания видеороликов
+            </figcaption>
+          </div>
+          <div class="video-item design">
+            <video controls>
+              <source src="./videos/3-7.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Веб-приложение для создания персональных визиток
+            </figcaption>
+          </div>
+
+          <div class="video-item nature">
+            <video controls>
+              <source src="./videos/4-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Онлайн-портал для изучения экологии и охраны природы
+            </figcaption>
+          </div>
+          <div class="video-item nature">
+            <video controls>
+              <source src="./videos/4-2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Сервис для онлайн-бронирования кемпингов</figcaption>
+          </div>
+
+          <div class="video-item nature">
+            <video controls>
+              <source src="./videos/4-3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Изучение дикой флоры и фауны</figcaption>
+          </div>
+          <div class="video-item business">
+            <video controls>
+              <source src="./videos/4-4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Веб-приложение для образовательных программ</figcaption>
+          </div>
+
+          <div class="video-item nature">
+            <video controls>
+              <source src="./videos/4-5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Веб-приложение для планирования экотуров и экспедиций
+            </figcaption>
+          </div>
+          <div class="video-item nature">
+            <video controls>
+              <source src="./videos/4-6.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Платформа для онлайн-донейтинга на природоохранительные проекты
+            </figcaption>
+          </div>
+
+          <div class="video-item nature">
+            <video controls>
+              <source src="./videos/4-8.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Мобильное приложение для определения растений и животных по
+              фотографии
+            </figcaption>
+          </div>
+          <div class="video-item advertising">
+            <video controls>
+              <source src="./videos/5-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Веб-приложение для создания и анализа электронных рассылок
+            </figcaption>
+          </div>
+
+          <div class="video-item advertising">
+            <video controls>
+              <source src="./videos/5-2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Веб-платформа для создания и размещения рекламных баннеров
+            </figcaption>
+          </div>
+          <div class="video-item advertising">
+            <video controls>
+              <source src="./videos/5-3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Мобильное приложение для создания рекламных видеороликов
+            </figcaption>
+          </div>
+
+          <div class="video-item advertising">
+            <video controls>
+              <source src="./videos/5-4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Сервис для проведения онлайн-конкурсов</figcaption>
+          </div>
+          <div class="video-item business">
+            <video controls>
+              <source src="./videos/5-5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Платформа для организации мероприятий и выставок
+            </figcaption>
+          </div>
+
+          <div class="video-item advertising">
+            <video controls>
+              <source src="./videos/5-6.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Сервис для размещения рекламы на цифровых платформах
+            </figcaption>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <h2 class="footer-logo__logo">
+            <span class="header-logo__span">V</span>ideo<span
+              class="header-logo__span"
+              >V</span
+            >isionaries
+          </h2>
+        </div>
+
+        <div class="footer__content">
+          <p class="footer__copyright">&copy; 2024 VideoVisionaries</p>
+          <p class="footer__rights">All rights reserved</p>
+        </div>
+      </div>
+
+      <div class="footer__info">
+        <div class="footer__contact">
+          <div class="footer__address">
+            <h3 class="main__title-small">Contacts</h3>
+            <address class="footer__address-info">
+              <p class="footer__address-text">
+                123 Main Street, New York, NY 10001
+              </p>
+              <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                  <a href="mailto:info@example.com" class="footer__contact-link"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer__contact-item">
+                  <a href="tel:(212) 555-1234" class="footer__contact-link"
+                    >(212) 555-1234</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer__social">
+            <h3 class="main__title-small">We are in social networks</h3>
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-vimeo2"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-linkedin"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-facebook2"
+                    ></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./modal.js"></script>
+    <script src="./portfolio.js"></script>
+  </body>
+</html>

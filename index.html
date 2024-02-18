@@ -20,7 +20,7 @@
   </head>
 
   <body>
-<!-- Header -->
+    <!-- Header -->
 
     <header class="header">
       <div class="header-logo">
@@ -34,13 +34,13 @@
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="index.html" class="header__nav-link">Home</a>
+            <a href="#" class="header__nav-link">Home</a>
           </li>
           <li class="header__nav-item">
-            <a href="servises.html" class="header__nav-link">Services</a>
+            <a href="./servises.html" class="header__nav-link">Services</a>
           </li>
           <li class="header__nav-item">
-            <a href="videos.html" class="header__nav-link">Video</a>
+            <a href="./portfolio.html" class="header__nav-link">Portfolio</a>
           </li>
         </ul>
       </nav>
@@ -89,10 +89,46 @@
           </form>
         </div>
       </div>
+      <div class="modal-contact">
+        <h3 class="main__title-small">Our contacts</h3>
+        <p>123 Main Street, New York, NY 10001</p>
+        <p>(212) 555-1234</p>
+        <p>info@example.com</p>
+
+        <div class="footer__social">
+          <h3 class="main__title-small">We are in social networks</h3>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-vimeo2"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-linkedin"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-facebook2"
+                  ></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <main class="main container">
-        <!-- First section -->
+      <!-- First section -->
 
       <section class="main__section">
         <div class="main__part">
@@ -105,7 +141,9 @@
             only be limited by the flight of your imagination!
           </p>
           <div class="main__buttons">
-            <button class="main__buttons-link">Let`s go!</button>
+            <button class="main__buttons-link" onclick="openModal()">
+              Let`s go!
+            </button>
             <button class="main__buttons-link">Learn more</button>
           </div>
         </div>
@@ -117,7 +155,7 @@
           </video>
         </div>
       </section>
-<!-- Second section -->
+      <!-- Second section -->
 
       <section class="main__section">
         <div class="main__part-work">
@@ -167,117 +205,129 @@
           </ul>
         </div>
 
-          <div class="main__part-foto">
-            <ul class="main__list-img">
-                <li class="main__part-img">
-                  <img
-                    src="./images/camera-1867184_640.jpg"
-                    class="main__item-img"
-                  />
-                </li>
-                <li class="main__part-img">
-                  <img src="./images/job2.jpg" class="main__item-img" />
-                </li>
-                <li class="main__part-img">
-                  <img
-                    src="./images/office-932926_640.jpg"
-                    class="main__item-img"
-                  />
-                </li>
-              </ul>
-          </div>
-    
+        <div>
+          <ul class="main__list-img">
+            <li class="main__part-img">
+              <img
+                src="./images/camera-1867184_640.jpg"
+                class="main__item-img"
+              />
+            </li>
+            <li class="main__part-img">
+              <img src="./images/job2.jpg" class="main__item-img" />
+            </li>
+            <li class="main__part-img">
+              <img
+                src="./images/office-932926_640.jpg"
+                class="main__item-img"
+              />
+            </li>
+            <li class="main__part-img">
+              <img src="./images/lens-3046269_640.jpg" class="main__item-img" />
+            </li>
+            <li class="main__part-img">
+              <img
+                src="./images/canon-5158887_640.jpg"
+                class="main__item-img"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Slayder -->
 
       <section class="main__section">
-        <h3 class="main__title-slider">This was created by our professionals</h3>
+        <h3 class="main__title-slider">
+          This was created by our professionals
+        </h3>
         <div class="slider-container">
-            <div class="slider">
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/1(1080p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/2(720p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/3(720p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/4 (720p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/5 (1080p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/6(1080p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/7(1080p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/8(720p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/9(1080p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/10 (720p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/11(720p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
-              <div class="slide">
-                <video controls class="slide-video">
-                  <source src="./videos/12 (1080p).mp4" type="video/mp4" />
-                  Your browser does not support video playback
-                </video>
-              </div>
+          <div class="slider">
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/1(1080p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
             </div>
-            <button class="prev-slide"><svg class="close" onclick="closeModal()" width="26" height="26">
-                <use xlink:href="./images/symbol-defs.svg#icon-point-left"></use>
-              </svg></button>
-            <button class="next-slide"><svg class="close" onclick="closeModal()" width="26" height="26">
-                <use xlink:href="./images/symbol-defs.svg#icon-point-right"></use>
-              </svg></button>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/2(720p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/3(720p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/4 (720p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/5 (1080p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/6(1080p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/7(1080p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/8(720p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/9(1080p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/10 (720p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/11(720p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
+            <div class="slide">
+              <video controls class="slide-video">
+                <source src="./videos/12 (1080p).mp4" type="video/mp4" />
+                Your browser does not support video playback
+              </video>
+            </div>
           </div>
-          
+          <button class="prev-slide">
+            <svg class="close" onclick="closeModal()" width="26" height="26">
+              <use xlink:href="./images/symbol-defs.svg#icon-point-left"></use>
+            </svg>
+          </button>
+          <button class="next-slide">
+            <svg class="close" onclick="closeModal()" width="26" height="26">
+              <use xlink:href="./images/symbol-defs.svg#icon-point-right"></use>
+            </svg>
+          </button>
+        </div>
       </section>
-      
 
       <!-- Third section -->
 
@@ -313,69 +363,81 @@
     </main>
 
     <!-- footer -->
+
     <footer class="footer">
-        <div class="footer__logo">
-            <div class="header-logo">
-                <h2 class="header-logo__logo">
-                  <span class="header-logo__span">V</span>ideo<span
-                    class="header-logo__span"
-                    >V</span
-                  >isionaries
-                </h2>
-              </div>
-              <div class="footer__content">
-                <p class="footer__copyright">&copy; 2024 VideoVisionaries</p>
-                <p class="footer__rights">All rights reserved</p>
-              </div>
+      <div class="footer-section">
+        <div class="footer-logo">
+          <h2 class="footer-logo__logo">
+            <span class="header-logo__span">V</span>ideo<span
+              class="header-logo__span"
+              >V</span
+            >isionaries
+          </h2>
         </div>
-      
+
+        <div class="footer__content">
+          <p class="footer__copyright">&copy; 2024 VideoVisionaries</p>
+          <p class="footer__rights">All rights reserved</p>
+        </div>
+      </div>
+
       <div class="footer__info">
         <div class="footer__contact">
-            <div class="footer__address">
-                <h3 class="main__title-small">Contacts</h3>
-              <address class="footer__address-info">
-                <p class="footer__address-text">
-                  123 Main Street, New York, NY 10001
-                </p>
-                <ul class="footer__contact-list">
-                  <li class="footer__contact-item">
-                    <a href="mailto:info@example.com" class="footer__contact-link"
-                      >info@example.com</a
-                    >
-                  </li>
-                  <li class="footer__contact-item">
-                    <a href="tel:(212) 555-1234" class="footer__contact-link"
-                      >(212) 555-1234</a
-                    >
-                  </li>
-                </ul>
-              </address>
-            </div>
-           
-            <div class="footer__social">
-              <h3 class="main__title-small">We are in social networks</h3>
-              <ul class="footer__social-list">
-                <li class="footer__social-item">
-                  <a href="#" class="footer__social-link"><svg class="footer__icon" width="50" height="50">
-                    <use xlink:href="./images/symbol-defs.svg#icon-vimeo2"></use>
-                  </svg></a>
+          <div class="footer__address">
+            <h3 class="main__title-small">Contacts</h3>
+            <address class="footer__address-info">
+              <p class="footer__address-text">
+                123 Main Street, New York, NY 10001
+              </p>
+              <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                  <a href="mailto:info@example.com" class="footer__contact-link"
+                    >info@example.com</a
+                  >
                 </li>
-                <li class="footer__social-item">
-                  <a href="#" class="footer__social-link"><svg class="footer__icon" width="50" height="50">
-                    <use xlink:href="./images/symbol-defs.svg#icon-linkedin"></use>
-                  </svg></a>
-                </li>
-                <li class="footer__social-item">
-                  <a href="#" class="footer__social-link"><svg class="footer__icon" width="50" height="50">
-                    <use xlink:href="./images/symbol-defs.svg#icon-facebook2"></use>
-                  </svg></a>
+                <li class="footer__contact-item">
+                  <a href="tel:(212) 555-1234" class="footer__contact-link"
+                    >(212) 555-1234</a
+                  >
                 </li>
               </ul>
-            </div>
+            </address>
           </div>
+
+          <div class="footer__social">
+            <h3 class="main__title-small">We are in social networks</h3>
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-vimeo2"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-linkedin"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-facebook2"
+                    ></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./slider.js"></script>
   </body>
 </html>

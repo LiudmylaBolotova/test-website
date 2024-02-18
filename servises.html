@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test-website</title>
+    <link rel="icon" type="image/png" href="https://example.com/image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="header-logo">
+        <h1 class="header-logo__logo">
+          <span class="header-logo__span">V</span>ideo<span
+            class="header-logo__span"
+            >V</span
+          >isionaries
+        </h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="./index.html" class="header__nav-link">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Services</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="./portfolio.html" class="header__nav-link">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <button class="header__button-link" onclick="openModal()">Ask!</button>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div id="backdrop" class="backdrop" onclick="closeModal()">
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <svg class="close" onclick="closeModal()" width="26" height="26">
+            <use xlink:href="./images/symbol-defs.svg#icon-cross"></use>
+          </svg>
+          <h2 class="modal-title">Fill out the form</h2>
+          <form id="form" class="form">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-contact">
+        <h3 class="main__title-small">Our contacts</h3>
+        <p>123 Main Street, New York, NY 10001</p>
+        <p>(212) 555-1234</p>
+        <p>info@example.com</p>
+
+        <div class="footer__social">
+          <h3 class="main__title-small">We are in social networks</h3>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-vimeo2"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-linkedin"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link"
+                ><svg class="footer__icon" width="50" height="50">
+                  <use
+                    xlink:href="./images/symbol-defs.svg#icon-facebook2"
+                  ></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <main class="main container">
+      <!-- First section -->
+
+      <section class="servises">
+        <h2 class="servises__title">Our capabilities are at your service</h2>
+        <p class="serviser__paragraph">
+          In VideoVisionaries, we take pride in our professionalism and creative
+          approach to crafting videos that not only visually impress but also
+          emotionally engage your audience. We strive for each video we create
+          to tell the unique story of your brand or product, with a special
+          emphasis on capturing attention and eliciting a response from viewers.
+        </p>
+        <p class="serviser__paragraph">
+          Our team consists of experienced professionals ready to take on every
+          stage of video production - from ideation and concept development to
+          post-production and promotion. We aim for each video to be more than
+          just an advertisement but a true work of art, capable of leaving a
+          lasting impression on the hearts and minds of your audience.
+        </p>
+        <p class="serviser__paragraph">
+          Whether it's a short and dynamic promo video for your website, an
+          informational clip for social media, or a full-scale television
+          commercial, we have the knowledge, experience, and technical resources
+          to exceed your expectations. Join VideoVisionaries today and give your
+          brand the opportunity to shine on the screens of your audience.
+        </p>
+        <div class="servises__button">
+          <svg class="servises__icon" width="50" height="50">
+            <use xlink:href="./images/symbol-defs.svg#icon-point-right"></use>
+          </svg>
+          <button class="main__buttons-link" onclick="openModal()">
+            Let`s go!
+          </button>
+        </div>
+      </section>
+
+      <!-- Second section -->
+      <section class="servises">
+        <h2 class="servises__title">Stages of work</h2>
+        <ul class="servises__list">
+          <li class="servises__item">
+            <h3 class="main__title-small"></h3>
+            <p class="servises__text">
+              A thorough examination of your goals and wishes. Development of
+              the main concept of the project
+            </p>
+            <img
+              src="./images/startup-593341_640.jpg"
+              alt="camera"
+              class="servises__item-img"
+            />
+          </li>
+          <li class="servises__item">
+            <h3 class="main__title-small"></h3>
+            <img
+              src="./images/woman-4290855_640.jpg"
+              alt="woman"
+              class="servises__item-img"
+            />
+            <p class="servises__text">
+              Selection of the most suitable locations and talents for the needs
+              of your project. Our specialists do it perfectly
+            </p>
+          </li>
+          <li class="servises__item">
+            <h3 class="main__title-small"></h3>
+            <p class="servises__text">
+              Implementation of the project. Responsibility, punctuality and
+              high quality are our priorities
+            </p>
+            <img
+              src="./images/drone-8499903_640.jpg"
+              alt="drone"
+              class="servises__item-img"
+            />
+          </li>
+          <li class="servises__item">
+            <h3 class="main__title-small"></h3>
+            <img src="./images/es.jpg" alt="man" class="servises__item-img" />
+            <p class="servises__text">
+              Editing the footage and choosing the most successful shots is one
+              of the main stages. At this stage, your opinion is also important
+              to us
+            </p>
+          </li>
+        </ul>
+        <div class="servises__button">
+          <button class="main__buttons-link" onclick="openModal()">
+            Let`s go!
+          </button>
+          <svg class="servises__icon" width="50" height="50">
+            <use xlink:href="./images/symbol-defs.svg#icon-point-left"></use>
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <h2 class="footer-logo__logo">
+            <span class="header-logo__span">V</span>ideo<span
+              class="header-logo__span"
+              >V</span
+            >isionaries
+          </h2>
+        </div>
+
+        <div class="footer__content">
+          <p class="footer__copyright">&copy; 2024 VideoVisionaries</p>
+          <p class="footer__rights">All rights reserved</p>
+        </div>
+      </div>
+
+      <div class="footer__info">
+        <div class="footer__contact">
+          <div class="footer__address">
+            <h3 class="main__title-small">Contacts</h3>
+            <address class="footer__address-info">
+              <p class="footer__address-text">
+                123 Main Street, New York, NY 10001
+              </p>
+              <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                  <a href="mailto:info@example.com" class="footer__contact-link"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer__contact-item">
+                  <a href="tel:(212) 555-1234" class="footer__contact-link"
+                    >(212) 555-1234</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer__social">
+            <h3 class="main__title-small">We are in social networks</h3>
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-vimeo2"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-linkedin"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link"
+                  ><svg class="footer__icon" width="50" height="50">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-facebook2"
+                    ></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./modal.js"></script>
+  </body>
+</html>
