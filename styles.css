@@ -391,11 +391,17 @@ button[type="submit"]:hover {
 }
 
 .main__buttons-portfolio {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 140px;
+  background-color: #ffffff;
+
   cursor: pointer;
   font-size: 26px;
   font-weight: 600;
-  width: 140px;
-  height: 140px;
+  width: 143px;
+  height: 143px;
   color: #007bff;
   border: 1px solid #007bff;
   border-radius: 100px;
@@ -419,6 +425,7 @@ button[type="submit"]:hover {
   width: 140px;
   height: 140px;
   color: #007bff;
+  background-color: #ffffff;
   border: 1px solid #007bff;
   border-radius: 100px;
 
