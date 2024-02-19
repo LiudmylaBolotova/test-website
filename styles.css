@@ -390,6 +390,29 @@ button[type="submit"]:hover {
   margin-top: 50px;
 }
 
+.main__buttons-portfolio {
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: 600;
+  width: 140px;
+  height: 140px;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 100px;
+
+  &:not(:last-child) {
+    margin-right: 70px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    color: #ffffff;
+    background-color: #0056b3;
+    border: 3px solid #ffffff;
+  }
+}
+
 .main__buttons-link {
   cursor: pointer;
   font-weight: 600;

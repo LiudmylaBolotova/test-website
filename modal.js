@@ -71,3 +71,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
   validateForm();
 });
+
+document.getElementById("form").addEventListener("click", function (event) {
+  event.stopPropagation();
+});
